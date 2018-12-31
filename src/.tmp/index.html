@@ -1,29 +1,61 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", {
-      "title": "Nutrita - The search engine for foods"
-    })
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+
+    <!-- Libs CSS -->
+    <!-- build:css assets/fonts/feather/feather.min.css -->
+    <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="node_modules/highlight.js/styles/vs2015.css">
+    <link rel="stylesheet" href="node_modules/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Theme CSS -->
+    
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="assets/css/theme.css" id="stylesheetLight">
+    <!-- endbuild -->
+      
+
+    <title>Nutrita - The search engine for foods</title>
   </head>
   <body>
 
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
-      @@include("partials/sidebar.html", {
-        "category": "pages",
-        "subcategory": "",
-        "page": "feed.html"
-      })
-    }
+    
     <div class="bg-ellipses bg-green-curved pb-7">
-      @@if (navPosition == 'topnav' || demoMode) {
-        @@include("partials/topnav.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "feed.html"
-        })
-      }
+      
+        <nav class="navbar navbar-expand-lg bg-transparent border border-0" id="topnav">
+          <div class="container">
+
+            <!-- Brand -->
+            <a class="mr-auto" href="index.html">
+              <img src="assets/img/nutrita-logo.svg" alt="Nutrita logo" height="48">
+            </a>
+
+            <!-- social -->
+            <div class="navbar-user">
+              <a class="text-white mr-5" href="feed.html">Blog</a>
+              <a href="" class="btn btn-rounded-circle btn-white mr-3 d-none d-md-inline-block">
+                <img class="mx-auto" src="assets/img/telegram.svg" alt="telegram logo" height="20">
+              </a>
+              <a href="" class="btn btn-rounded-circle btn-white mr-3 d-none d-md-inline-block">
+                <img class="mx-auto" src="assets/img/twitter.svg" alt="twitter logo" height="20">
+              </a>
+              <a href="" class="btn btn-rounded-circle btn-white d-none d-md-inline-block">
+                <img class="mx-auto" src="assets/img/medium.svg" alt="medium logo" height="20">
+              </a>
+            </div>
+
+          </div> <!-- / .container -->
+        </nav>
+
+      
       <div class="container mt-4 mb-6">
         <div class="row justify-content-center">
           <div class="col-11 col-lg-10 col-xl-8">
@@ -44,11 +76,9 @@
     ================================================== -->
     <div class="main-content">
 
-      @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
-      }
+      
 
-      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt--7">
+      <div class="container mt--7">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
 
@@ -1030,7 +1060,7 @@
         </div>
       </div><!-- / modal food -->
       <!-- footer -->
-      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} pb-4 mt-6">
+      <div class="container pb-4 mt-6">
         <div class="row justify-content-center">
           <div class="col-11 col-md-10 col-lg-8 col-xl-6">
 
@@ -1085,7 +1115,37 @@
 
     <!-- JAVASCRIPT
     ================================================== -->
-    @@include("partials/scripts.html")
+    <!-- Libs JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <!-- build:js assets/libs/chart.js/Chart.extension.min.js -->
+    <script src="assets/libs/chart.js/Chart.extension.js"></script>
+    <!-- endbuild -->
+    <script src="node_modules/highlightjs/highlight.pack.min.js"></script>
+    <script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="node_modules/list.js/dist/list.min.js"></script>
+    <script src="node_modules/quill/dist/quill.min.js"></script>
+    <script src="node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="node_modules/select2/dist/js/select2.min.js"></script>
+
+    <!-- Theme JS -->
+    <!-- build:js assets/js/theme.min.js -->
+    
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/dashkit.js"></script>
+    <script src="assets/js/dropdowns.js"></script>
+    <script src="assets/js/dropzone.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/highlight.js"></script>
+    <script src="assets/js/list.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/popover.js"></script>
+    <script src="assets/js/quill.js"></script>
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/tooltip.js"></script>
+    <!-- endbuild -->
 
   </body>
 </html>
