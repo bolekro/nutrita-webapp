@@ -671,360 +671,383 @@
           </div>
         </div> <!-- / .row -->
       </div>
+
       <!-- modal food -->
-      <div class="modal fade fixed-right" id="modalFood" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal fade fixed-right" id="modalFood" tabindex="-1" role="dialog" aria-labelledby="foodDetails" aria-hidden="true">
         <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
           <div class="modal-content">
-            <div class="card border border-0 shadow-none mb-0 pb-4 rounded-0">
-              <div class="card-body">
-                <div class="row  align-items-center">
-                  <div class="col">
-                    <div class="dropdown">
-                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
+            <div class="modal-body pb-5">
+              <div class="row">
+                <div class="col">
+                  <div class="dropdown">
+                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#!" class="dropdown-item">
+                        Share on Twitter
                       </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#!" class="dropdown-item">
-                          Share on Twitter
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Share on Facebook
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Copy link
-                        </a>
-                      </div>
+                      <a href="#!" class="dropdown-item">
+                        Share on Facebook
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Copy link
+                      </a>
                     </div>
                   </div>
-                  <div class="col-auto">
-                    <!-- Close -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
                 </div>
+                <div class="col">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="text-center">
+                <span class="card-avatar avatar avatar-xl mx-auto">
+                  <img src="assets/img/files/file-1.jpg" alt="" class="avatar-img rounded">
+                </span>
+              </div>
 
-                <div class="text-center">
-                  <a href="team-overview.html" class="card-avatar avatar avatar-xl mx-auto">
-                    <img src="assets/img/files/file-1.jpg" alt="" class="avatar-img rounded">
-                  </a>
+              <h2 class="card-title text-center mb-3">
+                Hass Avocado
+              </h2>
+              <!-- By company / cals -->
+              <h6 class="text-uppercase text-center text-muted my-2">
+                By company name
+              </h6>
+              <div class="row mt-4 mb-0">
+                <div class="col text-center">
+                  <label class="text-secondary small mb-0" for="servingSize">Adjust Serving</label>
                 </div>
+              </div>
+              <hr class="mt-4 mb-2">
+              <div class="row justify-content-center mb-3">
+                <div class="col-6 mt--4">
+                  <div class="input-group">
+                    <input type="text" id="servingSize" class="form-control form-control-sm py-2" aria-label="Serving size options" placeholder="1" aria-describedby="servingSizeHelp">
+                    <div class="input-group-append">
+                      <button class="btn btn-white btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">piece</button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item active" href="#">piece</a>
+                        <a class="dropdown-item" href="#">g</a>
+                        <a class="dropdown-item" href="#">cup</a>
+                        <a class="dropdown-item" href="#">table spoon</a>
+                        <a class="dropdown-item" href="#">tea spoon</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <small id="servingSizeHelp" class="form-text text-center text-muted">
+                *Default serving size is 1 avocado (medium).
+              </small>
+              <div class="row no-gutters mt-5 mb-3">
+                <div class="col-4">
+                  <div class="media">
+                    <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-green-light"></i></span>
+                    <div class="media-body">
+                      <h5 class="m-0">90%</h5>
+                      <p class="small text-muted mb-0">Fat • 22g</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="media">
+                    <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-orange-light"></i></span>
+                    <div class="media-body">
+                      <h5 class="m-0">3%</h5>
+                      <p class="small text-muted mb-0">Protein • 2g</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="media">
+                    <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-red-light"></i></span>
+                    <div class="media-body">
+                      <h5 class="m-0">7%</h5>
+                      <p class="small text-muted mb-0">Carbs • 3g</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Macro -->
+              <div class="progress"  style="height: 4px;">
+                <div class="progress-bar bg-green-light" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-orange-light" role="progressbar" style="width: 3%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-red-light" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- Macro DV -->
+              <div class="row">
+                <div class="col-6 py-4">
+                  <div class="chart-container chart-appended">
+                    <canvas id="insulineChart" class="chart-canvas" data-target="#insulineChartLegend"></canvas>
+                  </div>
+                  <!-- Legend -->
+                  <p class="text-center text-muted mt--6">24%</p>
+                  <div id="insulineChartLegend" class="chart-legend pt-3"></div>
+                </div>
+                <div class="col-6 py-4 border-left">
+                  <div class="chart-container chart-appended">
+                    <canvas id="MacroFatChart" class="chart-canvas" data-target="#MacroFatChartLegend"></canvas>
+                  </div>
+                  <!-- Legend -->
+                  <p class="text-center text-muted mt--6">24%</p>
+                  <div id="MacroFatChartLegend" class="chart-legend pt-3"></div>
+                </div>
+              </div>
+              <hr class="p-0 m-0">
+              <div class="row">
+                <div class="col-6 py-4">
+                  <div class="chart-container chart-appended">
+                    <canvas id="MacroProteinChart" class="chart-canvas" data-target="#MacroProteinChartLegend"></canvas>
+                  </div>
+                  <!-- Legend -->
+                  <p class="text-center text-muted mt--6">24%</p>
+                  <div id="MacroProteinChartLegend" class="chart-legend pt-3"></div>
+                </div>
+                <div class="col-6 py-4 border-left">
+                  <div class="chart-container chart-appended">
+                    <canvas id="MacroCarbsChart" class="chart-canvas" data-target="#MacroCarbsChartLegend"></canvas>
+                  </div>
+                  <!-- Legend -->
+                  <p class="text-center text-muted mt--6">10%</p>
+                  <div id="MacroCarbsChartLegend" class="chart-legend pt-3"></div>
+                </div>
+              </div>
+              <hr class="mt-0 mb-3">
 
-                <h2 class="card-title text-center mb-3">
-                  Hass Avocado
-                </h2>
-                <!-- By company / cals -->
-                <h6 class="text-uppercase text-center text-muted my-2">
-                  By company name
-                </h6>
-                <div class="row mt-5 mb-3">
-                  <div class="col-4">
-                    <div class="media">
-                      <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-green-light"></i></span>
-                      <div class="media-body">
-                        <h5 class="m-0">90%</h5>
-                        <p class="small text-muted mb-0">Fat • 22g</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="media">
-                      <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-orange-light"></i></span>
-                      <div class="media-body">
-                        <h5 class="m-0">3%</h5>
-                        <p class="small text-muted mb-0">Protein • 2g</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="media">
-                      <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-red-light"></i></span>
-                      <div class="media-body">
-                        <h5 class="m-0">7%</h5>
-                        <p class="small text-muted mb-0">Carbs • 3g</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Macro -->
-                <div class="progress"  style="height: 4px;">
-                  <div class="progress-bar bg-green-light" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  <div class="progress-bar bg-orange-light" role="progressbar" style="width: 3%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
-                  <div class="progress-bar bg-red-light" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <!-- Macro DV -->
-                <div class="row">
-                  <div class="col-6 py-4">
-                    <div class="chart-container chart-appended">
-                      <canvas id="insulineChart" class="chart-canvas" data-target="#insulineChartLegend"></canvas>
-                    </div>
-                    <!-- Legend -->
-                    <p class="text-center text-muted mt--6">24%</p>
-                    <div id="insulineChartLegend" class="chart-legend pt-3"></div>
-                  </div>
-                  <div class="col-6 py-4 border-left">
-                    <div class="chart-container chart-appended">
-                      <canvas id="MacroFatChart" class="chart-canvas" data-target="#MacroFatChartLegend"></canvas>
-                    </div>
-                    <!-- Legend -->
-                    <p class="text-center text-muted mt--6">24%</p>
-                    <div id="MacroFatChartLegend" class="chart-legend pt-3"></div>
-                  </div>
-                </div>
-                <hr class="p-0 m-0">
-                <div class="row">
-                  <div class="col-6 py-4">
-                    <div class="chart-container chart-appended">
-                      <canvas id="MacroProteinChart" class="chart-canvas" data-target="#MacroProteinChartLegend"></canvas>
-                    </div>
-                    <!-- Legend -->
-                    <p class="text-center text-muted mt--6">24%</p>
-                    <div id="MacroProteinChartLegend" class="chart-legend pt-3"></div>
-                  </div>
-                  <div class="col-6 py-4 border-left">
-                    <div class="chart-container chart-appended">
-                      <canvas id="MacroCarbsChart" class="chart-canvas" data-target="#MacroCarbsChartLegend"></canvas>
-                    </div>
-                    <!-- Legend -->
-                    <p class="text-center text-muted mt--6">10%</p>
-                    <div id="MacroCarbsChartLegend" class="chart-legend pt-3"></div>
-                  </div>
-                </div>
-                <hr class="mt-0 mb-3">
-
-                <!-- Nutrient Score -->
-                <div class="d-flex justify-content-between no-gutters mt-5">
+              <!-- Nutrient Score -->
+              <div class="d-flex justify-content-between no-gutters mt-5">
+                <p class="card-text small text-secondary mb-0">
+                  Nutrient Score <span class="badge badge-soft-success">Good</span>
+                </p>
+                <div class="d-flex justify-content-end">
                   <p class="card-text small text-secondary mb-0">
-                    Nutrient Score <span class="badge badge-soft-success">Good</span>
+                    <a class="text-secondary" data-toggle="tooltip" data-placement="top" title="Nutrient score definition on two line of text">
+                      <span class="fe fe-info"></span>
+                    </a>
                   </p>
-                  <div class="d-flex justify-content-end">
-                    <p class="card-text small text-secondary mb-0">
-                      <a class="text-secondary" data-toggle="tooltip" data-placement="top" title="Nutrient score definition on two line of text">
-                        <span class="fe fe-info"></span>
-                      </a>
-                    </p>
+                </div>
+              </div>
+              <div class="row align-items-center no-gutters">
+                <div class="col-auto">
+                  <div class="card-text small text-secondary mr-2">6/10</div>
+                </div>
+                <div class="col">
+                  <div class="progress progress-sm">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div class="row align-items-center no-gutters">
-                  <div class="col-auto">
-                    <div class="card-text small text-secondary mr-2">6/10</div>
-                  </div>
-                  <div class="col">
-                    <div class="progress progress-sm">
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
+              </div>
 
-                <hr class="my-3">
+              <hr class="my-3">
 
-                <!-- Vitamins & Minerals score -->
-                <div class="accordion pl-3" id="accordionExample">
-                  <!-- Vitamins Score -->
-                  <div class="card border border-0 shadow-none mb-0">
-                    <div class="card-header p-0" id="headingOne">
-                      <a class="text-secondary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="card-text small text-secondary mb-0">
-                          Vitamins Score <span class="badge badge-soft-warning">Ok</span>
-                        </p>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">5/10</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+              <!-- Vitamins & Minerals score -->
+              <div class="accordion pl-3" id="accordionExample">
+                <!-- Vitamins Score -->
+                <div class="card border border-0 shadow-none mb-0">
+                  <div class="card-header p-0" id="headingOne">
+                    <a class="text-secondary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <p class="card-text small text-secondary mb-0">
+                        Vitamins Score <span class="badge badge-soft-warning">Ok</span>
+                      </p>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">5/10</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </div>
-                      </a>
-                    </div>
-                    <!-- Vitamins Sub Score -->
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                      <div class="card-body pl-3 pt-3 pr-0 pb-0 mb-0">
-                        <!-- Vitamin item -->
-                        <div class="d-flex justify-content-between no-gutters">
-                          <p class="card-text small text-secondary mb-0">
-                            Vitamin A
-                          </p>
-                          <div class="d-flex justify-content-end">
-                            <p class="card-text small text-secondary mb-0">
-                              13µg
-                            </p>
-                          </div>
-                        </div>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">24% DV</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-3">
-                        <!-- Vitamin item -->
-                        <div class="d-flex justify-content-between no-gutters">
-                          <p class="card-text small text-secondary mb-0">
-                            Vitamin A
-                          </p>
-                          <div class="d-flex justify-content-end">
-                            <p class="card-text small text-secondary mb-0">
-                              13µg
-                            </p>
-                          </div>
-                        </div>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">24% DV</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-3">
-                        <!-- Vitamin item -->
-                        <div class="d-flex justify-content-between no-gutters">
-                          <p class="card-text small text-secondary mb-0">
-                            Vitamin A
-                          </p>
-                          <div class="d-flex justify-content-end">
-                            <p class="card-text small text-secondary mb-0">
-                              13µg
-                            </p>
-                          </div>
-                        </div>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">24% DV</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-3">
                       </div>
-                    </div>
+                    </a>
                   </div>
-                  <!-- Minerals Score -->
-                  <div class="card border border-0 shadow-none mb-3">
-                    <div class="card-header p-0" id="headingTwo">
-                      <a class="text-secondary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <!-- Vitamins Sub Score -->
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body pl-3 pt-3 pr-0 pb-0 mb-0">
+                      <!-- Vitamin item -->
+                      <div class="d-flex justify-content-between no-gutters">
                         <p class="card-text small text-secondary mb-0">
-                          Minerals Score <span class="badge badge-soft-success">Good</span>
+                          Vitamin A
                         </p>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">9/10</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- Minerals Sub Score -->
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                      <div class="card-body pl-3 pt-3 pr-0 pb-0 mb-0">
-                        <!-- Mineral item -->
-                        <div class="d-flex justify-content-between no-gutters">
+                        <div class="d-flex justify-content-end">
                           <p class="card-text small text-secondary mb-0">
-                            Calcium
+                            13µg
                           </p>
-                          <div class="d-flex justify-content-end">
-                            <p class="card-text small text-secondary mb-0">
-                              13µg
-                            </p>
-                          </div>
                         </div>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">24% DV</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-3">
-                        <!-- Vitamin item -->
-                        <div class="d-flex justify-content-between no-gutters">
-                          <p class="card-text small text-secondary mb-0">
-                            Zinc
-                          </p>
-                          <div class="d-flex justify-content-end">
-                            <p class="card-text small text-secondary mb-0">
-                              13µg
-                            </p>
-                          </div>
-                        </div>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">24% DV</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-3">
-                        <!-- Vitamin item -->
-                        <div class="d-flex justify-content-between no-gutters">
-                          <p class="card-text small text-secondary mb-0">
-                            Selenium
-                          </p>
-                          <div class="d-flex justify-content-end">
-                            <p class="card-text small text-secondary mb-0">
-                              13µg
-                            </p>
-                          </div>
-                        </div>
-                        <div class="row align-items-center no-gutters">
-                          <div class="col-auto">
-                            <div class="card-text small text-secondary mr-2">24% DV</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm">
-                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-3">
                       </div>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">24% DV</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-3">
+                      <!-- Vitamin item -->
+                      <div class="d-flex justify-content-between no-gutters">
+                        <p class="card-text small text-secondary mb-0">
+                          Vitamin A
+                        </p>
+                        <div class="d-flex justify-content-end">
+                          <p class="card-text small text-secondary mb-0">
+                            13µg
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">24% DV</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-3">
+                      <!-- Vitamin item -->
+                      <div class="d-flex justify-content-between no-gutters">
+                        <p class="card-text small text-secondary mb-0">
+                          Vitamin A
+                        </p>
+                        <div class="d-flex justify-content-end">
+                          <p class="card-text small text-secondary mb-0">
+                            13µg
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">24% DV</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-3">
                     </div>
                   </div>
                 </div>
+                <!-- Minerals Score -->
+                <div class="card border border-0 shadow-none mb-3">
+                  <div class="card-header p-0" id="headingTwo">
+                    <a class="text-secondary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <p class="card-text small text-secondary mb-0">
+                        Minerals Score <span class="badge badge-soft-success">Good</span>
+                      </p>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">9/10</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Minerals Sub Score -->
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body pl-3 pt-3 pr-0 pb-0 mb-0">
+                      <!-- Mineral item -->
+                      <div class="d-flex justify-content-between no-gutters">
+                        <p class="card-text small text-secondary mb-0">
+                          Calcium
+                        </p>
+                        <div class="d-flex justify-content-end">
+                          <p class="card-text small text-secondary mb-0">
+                            13µg
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">24% DV</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-3">
+                      <!-- Vitamin item -->
+                      <div class="d-flex justify-content-between no-gutters">
+                        <p class="card-text small text-secondary mb-0">
+                          Zinc
+                        </p>
+                        <div class="d-flex justify-content-end">
+                          <p class="card-text small text-secondary mb-0">
+                            13µg
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">24% DV</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-3">
+                      <!-- Vitamin item -->
+                      <div class="d-flex justify-content-between no-gutters">
+                        <p class="card-text small text-secondary mb-0">
+                          Selenium
+                        </p>
+                        <div class="d-flex justify-content-end">
+                          <p class="card-text small text-secondary mb-0">
+                            13µg
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+                          <div class="card-text small text-secondary mr-2">24% DV</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-3">
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                <!-- Keto Score -->
-                <div class="d-flex justify-content-between no-gutters mt-3">
+              <!-- Keto Score -->
+              <div class="d-flex justify-content-between no-gutters mt-3">
+                <p class="card-text small text-secondary mb-0">
+                  Keto Score <span class="badge badge-soft-success">Good</span>
+                </p>
+                <div class="d-flex justify-content-end">
                   <p class="card-text small text-secondary mb-0">
-                    Keto Score <span class="badge badge-soft-success">Good</span>
+                    <a class="text-secondary" data-toggle="tooltip" data-placement="top" title="Keto score definition on two line of text">
+                      <span class="fe fe-info"></span>
+                    </a>
                   </p>
-                  <div class="d-flex justify-content-end">
-                    <p class="card-text small text-secondary mb-0">
-                      <a class="text-secondary" data-toggle="tooltip" data-placement="top" title="Keto score definition on two line of text">
-                        <span class="fe fe-info"></span>
-                      </a>
-                    </p>
-                  </div>
                 </div>
-                <div class="row align-items-center no-gutters">
-                  <div class="col-auto">
-                    <div class="card-text small text-secondary mr-2">6/10</div>
-                  </div>
-                  <div class="col">
-                    <div class="progress progress-sm">
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+              </div>
+              <div class="row align-items-center no-gutters">
+                <div class="col-auto">
+                  <div class="card-text small text-secondary mr-2">6/10</div>
+                </div>
+                <div class="col">
+                  <div class="progress progress-sm">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
