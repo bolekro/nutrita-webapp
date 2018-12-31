@@ -187,21 +187,7 @@ var ThemeCharts = (function() {
         },
         doughnut: {
           cutoutPercentage: 83,
-          tooltips: {
-            callbacks: {
-              title: function(item, data) {
-                var title = data.labels[item[0].index];
-                return title;
-              },
-              label: function(item, data) {
-                var value = data.datasets[0].data[item.index];
-                var content = '';
-
-                content += '<span class="popover-body-value">' + value + '</span>';
-                return content;
-              }
-            }
-          },
+          tooltips: false,
           legendCallback: function(chart) {
             var data = chart.data;
             var content = '';

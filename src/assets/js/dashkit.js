@@ -518,21 +518,7 @@ var Insulin = (function() {
     var insulineChart = new Chart($chart, {
       type: 'doughnut',
       options: {
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
-            }
-          }
-        }
+        tooltips: false,
       },
       data: {
         labels: ['Insulin Index'],
@@ -601,21 +587,7 @@ var MacroFat = (function() {
     var MacroFatChart = new Chart($chart, {
       type: 'doughnut',
       options: {
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
-            }
-          }
-        }
+        tooltips: false,
       },
       data: {
         labels: ['DV Fat'],
@@ -683,21 +655,7 @@ var MacroProtein = (function() {
     var MacroProteinChart = new Chart($chart, {
       type: 'doughnut',
       options: {
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
-            }
-          }
-        }
+        tooltips: false,
       },
       data: {
         labels: ['DV Protein'],
@@ -766,21 +724,7 @@ var MacroCarbs = (function() {
     var MacroCarbsChart = new Chart($chart, {
       type: 'doughnut',
       options: {
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
-            }
-          }
-        }
+        tooltips: false,
       },
       data: {
         labels: ['DV Carbs'],
