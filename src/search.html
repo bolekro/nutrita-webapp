@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Nutrita - The search engine for foods"
+    })
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "",
+        "page": "feed.html"
+      })
+    }
+    <div class="bg-ellipses bg-green-curved pb-7">
+      @@if (navPosition == 'topnav' || demoMode) {
+        @@include("partials/topnav.html", {
+          "category": "pages",
+          "subcategory": "",
+          "page": "feed.html"
+        })
+      }
+      <div class="container mt-4 mb-6">
+        <div class="row justify-content-center">
+          <div class="col-11 col-lg-10 col-xl-8">
+            <!-- Title -->
+            <h1 class="display-2 d-none d-md-block text-center text-white">
+              The search engine for foods
+            </h1>
+            <h1 class="display-4 d-block d-md-none text-center text-white mt-5">
+              The search engine for foods
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt--7">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <!-- Search results -->
+            <div class="card" data-toggle="lists" data-lists-values='["name"]'>
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      +26,000 references
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+
+                      <!-- Toggle -->
+                      <a href="#!" class="small text-muted dropdown-toggle" data-toggle="dropdown">
+                        Sort order
+                      </a>
+
+                      <!-- Menu -->
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item sort" data-sort="name" href="#!">
+                          Asc
+                        </a>
+                        <a class="dropdown-item sort" data-sort="name" href="#!">
+                          Desc
+                        </a>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-12">
+
+                    <!-- Form -->
+                    <form>
+                      <div class="input-group input-group-flush input-group-merge">
+                        <input type="search" class="form-control form-control-prepended search" placeholder="Type to search food or brand 🥑">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <span class="fe fe-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-body">
+
+                <!-- List -->
+                <ul class="list-group list-group-lg list-group-flush list my--4">
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-1.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Hass Avocado
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 80 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-success">Good</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">7/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-2.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Young Tropical Coconut
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 283 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-warning">Ok</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">5/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-3.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Farm-Raised Atlantic Salmon Fillet
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 177 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-danger">Bad</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">2/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-4.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Beef Flank Steak
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 120 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-success">Good</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">6/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-1.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Hass Avocado
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 80 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-success">Good</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">7/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-2.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Young Tropical Coconut
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 283 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-warning">Ok</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">5/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-3.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Farm-Raised Atlantic Salmon Fillet
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 177 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-danger">Bad</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">2/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a class="avatar avatar-lg" data-toggle="modal" href="#modalFood">
+                          <img src="assets/img/files/file-4.jpg" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          <a data-toggle="modal" href="#modalFood">
+                            Beef Flank Steak
+                          </a>
+                        </h4>
+
+                        <!-- By company / cals -->
+                        <h6 class="text-uppercase text-muted my-2">
+                          By company name • 120 Cals
+                        </h6>
+
+                        <!-- Nutrient Score -->
+                        <p class="card-text small text-secondary mb-0">
+                          Nutrient density <span class="badge badge-soft-success">Good</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">6/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Share on Twitter
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Share on Facebook
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Copy link
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                </ul>
+              </div>
+              <!-- More -->
+              <a href="#" class="card-footer text-center text-secondary">
+                Show More
+              </a>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <!-- modal food -->
+      <div class="modal fade fixed-right" id="modalFood" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-vertical" role="document">
+          <div class="modal-content">
+            <div class="card border border-0 shadow-none mb-0 pb-4 rounded-0">
+              <div class="card-body">
+                <div class="row  align-items-center">
+                  <div class="col">
+                    <div class="dropdown">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Share on Twitter
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Share on Facebook
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Copy link
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <!-- Close -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <a href="team-overview.html" class="card-avatar avatar avatar-xl mx-auto">
+                    <img src="assets/img/files/file-1.jpg" alt="" class="avatar-img rounded">
+                  </a>
+                </div>
+
+                <h2 class="card-title text-center mb-3">
+                  Hass Avocado
+                </h2>
+                <!-- By company / cals -->
+                <h6 class="text-uppercase text-center text-muted my-2">
+                  By company name
+                </h6>
+                <div class="row mt-5 mb-3">
+                  <div class="col-4">
+                    <div class="media">
+                      <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-green-light"></i></span>
+                      <div class="media-body">
+                        <h5 class="m-0">90%</h5>
+                        <p class="small text-muted mb-0">Fat • 22g</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="media">
+                      <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-orange-light"></i></span>
+                      <div class="media-body">
+                        <h5 class="m-0">3%</h5>
+                        <p class="small text-muted mb-0">Protein • 2g</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="media">
+                      <span class="chart-legend-item align-self-center"><i class="chart-legend-indicator bg-red-light"></i></span>
+                      <div class="media-body">
+                        <h5 class="m-0">7%</h5>
+                        <p class="small text-muted mb-0">Carbs • 3g</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Macro -->
+                <div class="progress"  style="height: 4px;">
+                  <div class="progress-bar bg-green-light" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-orange-light" role="progressbar" style="width: 3%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-red-light" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- Macro DV -->
+                <div class="row">
+                  <div class="col-6 py-4">
+                    <div class="chart-container chart-appended">
+                      <canvas id="insulineChart" class="chart-canvas" data-target="#insulineChartLegend"></canvas>
+                    </div>
+                    <!-- Legend -->
+                    <p class="text-center text-muted mt--6">24%</p>
+                    <div id="insulineChartLegend" class="chart-legend pt-3"></div>
+                  </div>
+                  <div class="col-6 py-4 border-left">
+                    <div class="chart-container chart-appended">
+                      <canvas id="MacroFatChart" class="chart-canvas" data-target="#MacroFatChartLegend"></canvas>
+                    </div>
+                    <!-- Legend -->
+                    <p class="text-center text-muted mt--6">24%</p>
+                    <div id="MacroFatChartLegend" class="chart-legend pt-3"></div>
+                  </div>
+                </div>
+                <hr class="p-0 m-0">
+                <div class="row">
+                  <div class="col-6 py-4">
+                    <div class="chart-container chart-appended">
+                      <canvas id="MacroProteinChart" class="chart-canvas" data-target="#MacroProteinChartLegend"></canvas>
+                    </div>
+                    <!-- Legend -->
+                    <p class="text-center text-muted mt--6">24%</p>
+                    <div id="MacroProteinChartLegend" class="chart-legend pt-3"></div>
+                  </div>
+                  <div class="col-6 py-4 border-left">
+                    <div class="chart-container chart-appended">
+                      <canvas id="MacroCarbsChart" class="chart-canvas" data-target="#MacroCarbsChartLegend"></canvas>
+                    </div>
+                    <!-- Legend -->
+                    <p class="text-center text-muted mt--6">10%</p>
+                    <div id="MacroCarbsChartLegend" class="chart-legend pt-3"></div>
+                  </div>
+                </div>
+                <hr class="mt-0 mb-3">
+
+                <!-- Nutrient Score -->
+                <div class="d-flex justify-content-between no-gutters mt-5">
+                  <p class="card-text small text-secondary mb-0">
+                    Nutrient Score <span class="badge badge-soft-success">Good</span>
+                  </p>
+                  <div class="d-flex justify-content-end">
+                    <p class="card-text small text-secondary mb-0">
+                      <a class="text-secondary" data-toggle="tooltip" data-placement="top" title="Nutrient score definition on two line of text">
+                        <span class="fe fe-info"></span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="row align-items-center no-gutters">
+                  <div class="col-auto">
+                    <div class="card-text small text-secondary mr-2">6/10</div>
+                  </div>
+                  <div class="col">
+                    <div class="progress progress-sm">
+                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-3">
+
+                <!-- Vitamins & Minerals score -->
+                <div class="accordion pl-3" id="accordionExample">
+                  <!-- Vitamins Score -->
+                  <div class="card border border-0 shadow-none mb-0">
+                    <div class="card-header p-0" id="headingOne">
+                      <a class="text-secondary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="card-text small text-secondary mb-0">
+                          Vitamins Score <span class="badge badge-soft-warning">Ok</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">5/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Vitamins Sub Score -->
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body pl-3 pt-3 pr-0 pb-0 mb-0">
+                        <!-- Vitamin item -->
+                        <div class="d-flex justify-content-between no-gutters">
+                          <p class="card-text small text-secondary mb-0">
+                            Vitamin A
+                          </p>
+                          <div class="d-flex justify-content-end">
+                            <p class="card-text small text-secondary mb-0">
+                              13µg
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">24% DV</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-3">
+                        <!-- Vitamin item -->
+                        <div class="d-flex justify-content-between no-gutters">
+                          <p class="card-text small text-secondary mb-0">
+                            Vitamin A
+                          </p>
+                          <div class="d-flex justify-content-end">
+                            <p class="card-text small text-secondary mb-0">
+                              13µg
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">24% DV</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-3">
+                        <!-- Vitamin item -->
+                        <div class="d-flex justify-content-between no-gutters">
+                          <p class="card-text small text-secondary mb-0">
+                            Vitamin A
+                          </p>
+                          <div class="d-flex justify-content-end">
+                            <p class="card-text small text-secondary mb-0">
+                              13µg
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">24% DV</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-3">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Minerals Score -->
+                  <div class="card border border-0 shadow-none mb-3">
+                    <div class="card-header p-0" id="headingTwo">
+                      <a class="text-secondary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <p class="card-text small text-secondary mb-0">
+                          Minerals Score <span class="badge badge-soft-success">Good</span>
+                        </p>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">9/10</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Minerals Sub Score -->
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body pl-3 pt-3 pr-0 pb-0 mb-0">
+                        <!-- Mineral item -->
+                        <div class="d-flex justify-content-between no-gutters">
+                          <p class="card-text small text-secondary mb-0">
+                            Calcium
+                          </p>
+                          <div class="d-flex justify-content-end">
+                            <p class="card-text small text-secondary mb-0">
+                              13µg
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">24% DV</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-3">
+                        <!-- Vitamin item -->
+                        <div class="d-flex justify-content-between no-gutters">
+                          <p class="card-text small text-secondary mb-0">
+                            Zinc
+                          </p>
+                          <div class="d-flex justify-content-end">
+                            <p class="card-text small text-secondary mb-0">
+                              13µg
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">24% DV</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-3">
+                        <!-- Vitamin item -->
+                        <div class="d-flex justify-content-between no-gutters">
+                          <p class="card-text small text-secondary mb-0">
+                            Selenium
+                          </p>
+                          <div class="d-flex justify-content-end">
+                            <p class="card-text small text-secondary mb-0">
+                              13µg
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+                            <div class="card-text small text-secondary mr-2">24% DV</div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Keto Score -->
+                <div class="d-flex justify-content-between no-gutters mt-3">
+                  <p class="card-text small text-secondary mb-0">
+                    Keto Score <span class="badge badge-soft-success">Good</span>
+                  </p>
+                  <div class="d-flex justify-content-end">
+                    <p class="card-text small text-secondary mb-0">
+                      <a class="text-secondary" data-toggle="tooltip" data-placement="top" title="Keto score definition on two line of text">
+                        <span class="fe fe-info"></span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="row align-items-center no-gutters">
+                  <div class="col-auto">
+                    <div class="card-text small text-secondary mr-2">6/10</div>
+                  </div>
+                  <div class="col">
+                    <div class="progress progress-sm">
+                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- / modal food -->
+      <!-- footer -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} pb-4 mt-6">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-10 col-lg-8 col-xl-6">
+
+            <!-- Title -->
+            <h2 class="display-3 text-center d-none d-md-block">
+              Use our app to start making smarter food choices
+            </h2>
+            <h2 class="display-4 text-center d-block d-md-none">
+              Use our app to start making smarter food choices
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-secondary text-center mt-5">
+              Be the first to try our Alpha and know when we officially launch 👇.
+            </p>
+            <form action="https://fund.us17.list-manage.com/subscribe/post?u=9c0647dcb587985ed6121cdf6&amp;id=150e0f091e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-75 mx-auto mb-4" target="_blank" novalidate>
+                <div class="emailer-box justify-content-center">
+                  <input class="form-control form-control-lg" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="myemail@address.com" required>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7af5c3187ee4d9e4add305a2e_035cb9fb40" tabindex="-1" value=""></div>
+                  <button class="btn bg-green text-white btn-lg btn-block mt-3" name="subscribe" id="mc-embedded-subscribe">
+                      Request Access
+                  </button>
+                </div>
+            </form>
+            <div class="row justify-content-center">
+              <div class="col-auto mb-5 mt-5">
+                <div class="col-auto mb-5 mt-5">
+                  <a href="https://t.me/weswapio" class="btn btn-rounded-circle btn-white mr-3">
+                    <img class="mx-auto" src="assets/img/telegram.svg" alt="telegram logo" height="20">
+                  </a>
+                  <a href="https://twitter.com/weswap_official" class="btn btn-rounded-circle btn-white mr-3">
+                    <img class="mx-auto" src="assets/img/twitter.svg" alt="twitter logo" height="20">
+                  </a>
+                  <a href="https://medium.com/weswap" class="btn btn-rounded-circle btn-white mr-3">
+                    <img class="mx-auto" src="assets/img/medium.svg" alt="medium logo" height="20">
+                  </a>
+                  <a href="https://github.com/weswap" class="btn btn-rounded-circle btn-white">
+                    <img class="mx-auto" src="assets/img/github.svg" alt="medium logo" height="20">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p class="text-center text-secondary">
+              Contact us at <a class="text-secondary" href="mailto:team@weswap.io?subject=Hey">hello@nutrita.app</a> • Copyright © 2018 Nutrita.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
